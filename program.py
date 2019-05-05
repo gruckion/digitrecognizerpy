@@ -1,4 +1,5 @@
 from manhattan_distance import ManhattanDistance
+from euclidean_distance import EuclideanDistance
 from basic_classifier import BasicClassifier
 from classifier import Classifier
 from distance import Distance
@@ -9,7 +10,7 @@ from evaluator import Evaluator
 def main():
     dataDirectory = "./data/"
 
-    distance: Distance = ManhattanDistance()
+    distance: Distance = EuclideanDistance()
     classifier: Classifier = BasicClassifier(distance)
 
     training = DataReader.read_observations(
