@@ -11,11 +11,4 @@ class ManhattanDistance(Distance):
         if (len(pixels1) != len(pixels2)):
             raise ValueError("Inconsistent image sizes.")
 
-        distance: float = ne.evaluate("sum(abs(pixels1 - pixels2))")
-
-        #
-
-        # for i, (pixel1, pixel2) in enumerate(zip(pixels1, pixels2)):
-        #     distance += fabs(pixel1 - pixel2)
-
-        return distance
+        return ne.evaluate("sum(abs(pixels1 - pixels2))")
