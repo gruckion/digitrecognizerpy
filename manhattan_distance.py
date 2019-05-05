@@ -1,6 +1,7 @@
 from typing import List
 from distance import Distance
 from math import fabs
+import numexpr as ne
 
 
 class ManhattanDistance(Distance):
@@ -10,9 +11,11 @@ class ManhattanDistance(Distance):
         if (len(pixels1) != len(pixels2)):
             raise ValueError("Inconsistent image sizes.")
 
-        distance: float = 0
+        distance: float = ne.evaluate("sum(abs(pixels1 - pixels2))")
 
-        for i, (pixel1, pixel2) in enumerate(zip(pixels1, pixels2)):
-            distance += fabs(pixel1 - pixel2)
+        #
+
+        # for i, (pixel1, pixel2) in enumerate(zip(pixels1, pixels2)):
+        #     distance += fabs(pixel1 - pixel2)
 
         return distance

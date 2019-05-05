@@ -13,5 +13,4 @@ class Evaluator():
     @staticmethod
     def _score(obs: Observation, classifier: BasicClassifier):
         score = 1.0 if classifier.predict(obs.pixels) == obs.label else 0
-        print("score: ", score)
         return score
