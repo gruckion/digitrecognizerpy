@@ -34,7 +34,7 @@ mkl-fft==1.0.12
 mkl-random==1.0.2
 mypy==0.701
 mypy-extensions==0.4.1
-nbconvert==5.5.0
+nbconvert==6.5.1
 nbformat==4.4.0
 notebook==5.7.8
 numpy==1.16.3
